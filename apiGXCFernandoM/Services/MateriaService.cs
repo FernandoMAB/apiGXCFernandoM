@@ -52,7 +52,7 @@ namespace apiGXCFernandoM.Services
 
             if (materiaToUpdate != null)
             {
-                if (dbcontext.Materias.FirstOrDefault(x => x.nombre.Equals(materia.nombre) && x.Id != materia.Id) is Materia usuarioRepetido)
+                if (dbcontext.Materias.Where(x => x.nombre.Equals(materia.nombre) && x.Id != materia.Id) is Materia usuarioRepetido)
                 {
                     throw new BusinessException(Constants.USEREPE);
                 }

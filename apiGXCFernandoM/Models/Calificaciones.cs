@@ -10,8 +10,8 @@
 
         public decimal calificacion { get; set; }
 
-        public virtual Colegio Colegio { get; set; }
-        public virtual Materia Materia { get; set; }
-        public virtual Usuario Usuario { get; set; }
+        public virtual Colegio? Colegio { get; set; }
+        public virtual Materia? Materia { get; set; }
+        public virtual Usuario? Usuario { get; set; }
     }
 }

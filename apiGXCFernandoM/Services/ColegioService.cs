@@ -51,7 +51,7 @@ namespace apiGXCFernandoM.Services
 
             if (colegioToUpdate != null)
             {
-                if (dbcontext.Colegios.FirstOrDefault(x => x.nombre.Equals(colegio.nombre) && x.id != colegio.id) is Colegio colegioRepetido)
+                if (dbcontext.Colegios.Where(x => x.nombre.Equals(colegio.nombre) && x.id != colegio.id) is Colegio colegioRepetido)
                 {
                     throw new BusinessException(Constants.COLREPE);
                 }

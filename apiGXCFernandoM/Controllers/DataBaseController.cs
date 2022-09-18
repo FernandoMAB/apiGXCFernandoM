@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace apiGXCFernandoM.Controllers
 {
-    [Authorize]
     [Route("api/[controller]")]
     public class DataBaseController : ControllerBase
     {
@@ -29,7 +28,6 @@ namespace apiGXCFernandoM.Controllers
                 return Created("201", "Creado Exitosamente!!");
             else
                 return Conflict("Error al crear");
-            //return Ok(creado?"Creado Exitosamente!!":"Error al crear");
         }
 
     }

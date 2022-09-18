@@ -1,0 +1,638 @@
+{
+	"info": {
+		"_postman_id": "11866037-68c3-4577-b476-efec09020df3",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13332859"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"Fer\",\r\n    \"password\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path}}/api/Login",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"Login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Calificaciones",
+			"item": [
+				{
+					"name": "Obtener todas las calificaciónes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/api/Calificaciones/",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"Calificaciones",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener una calificación por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/api/Calificaciones/getById/:id",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"Calificaciones",
+								"getById",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1001"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear una calificación",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idColegio\": 1,\r\n    \"idMateria\": 1,\r\n    \"idUsuario\": 1,\r\n    \"calificacion\": 10.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path}}/api/Calificaciones/",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"Calificaciones",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar una calificación",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idColegio\": 1,\r\n    \"idMateria\": 1,\r\n    \"idUsuario\": 2,\r\n    \"calificacion\": 9.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path}}/api/Calificaciones/:id",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"Calificaciones",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1001"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar un registro",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/api/Calificaciones/:id",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"Calificaciones",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1001"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Obtener todos los usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/api/Usuario",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"Usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener un usuario por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/api/Usuario/getById/:id",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"Usuario",
+								"getById",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear un usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombreCompleto\": \"Nombre Completo\",\r\n  \"username\": \"userPrueba\",\r\n  \"password\": \"string\",\r\n  \"correoElectronico\": \"correo@electronico.com\",\r\n  \"rol\": \"Estudiante\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path}}/api/Usuario",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"Usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar un usuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombreCompleto\": \"Nombre Completo\",\r\n  \"username\": \"usertest\",\r\n  \"password\": \"1234test\",\r\n  \"correoElectronico\": \"correo@electronico.com\",\r\n  \"rol\": \"Estudiante\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path}}/api/Usuario/:id",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"Usuario",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1002"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar un usuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/api/Usuario/:id",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"Usuario",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1001"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Colegio",
+			"item": [
+				{
+					"name": "Obtener todos los colegios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/api/Colegio",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"Colegio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener un colegio por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/api/Colegio/getById/:id",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"Colegio",
+								"getById",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear un colegio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Colegio 1\",\r\n  \"tipoColegio\": \"Publico\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path}}/api/Colegio",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"Colegio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar un colegio",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Colegio Pedro\",\r\n  \"tipoColegio\": \"Publico1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path}}/api/Colegio/:id",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"Colegio",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1001"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar un Colegio",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/api/Colegio/:id",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"Colegio",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1002"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Materia",
+			"item": [
+				{
+					"name": "Obtener todas las materias",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/api/Materia",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"Materia"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener una materia por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/api/Materia/getById/:id",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"Materia",
+								"getById",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear una materia",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idColegio\": 1001,\r\n  \"nombre\": \"Lenguaje\",\r\n  \"area\": \"Literatura\",\r\n  \"numeroEstudiantes\": 10,\r\n  \"docenteAsignado\": \"Juan Jose\",\r\n  \"curso\": \"1\",\r\n  \"paralelo\": \"B\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path}}/api/Materia",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"Materia"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar una materia",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idColegio\": 1,\r\n  \"nombre\": \"Lenguaje\",\r\n  \"area\": \"Literatura\",\r\n  \"numeroEstudiantes\": 10,\r\n  \"docenteAsignado\": \"Juan Jose\",\r\n  \"curso\": \"1\",\r\n  \"paralelo\": \"B\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path}}/api/Materia/:id",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"Materia",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1001"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar una materia",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/api/Materia/:id",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"Materia",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1001"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Database",
+			"item": [
+				{
+					"name": "Crear Base de datos por petición",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/api/DataBase/CreateDatabase",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"DataBase",
+								"CreateDatabase"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

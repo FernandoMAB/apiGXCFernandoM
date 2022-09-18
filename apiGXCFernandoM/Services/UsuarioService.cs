@@ -53,7 +53,7 @@ namespace apiGXCFernandoM.Services
 
             if (usuarioToUpdate != null)
             {
-                if (dbcontext.Usuarios.FirstOrDefault(x => x.username.Equals(usuario.username) && x.Id != usuario.Id) is Usuario usuarioRepetido)
+                if (dbcontext.Usuarios.Where(x => x.username.Equals(usuario.username) && x.Id != usuario.Id) is Usuario usuarioRepetido)
                 {
                     throw new BusinessException(Constants.USEREPE);
                 }
